@@ -12,6 +12,14 @@ function insert_alto(container) {
         page_height = page.attr('HEIGHT'),
         page_width = page.attr('WIDTH'),
         content = $('#contents');
+
+    if (page_height === undefined && page_width == undefined) {
+        // some versions of alto has no dimensions on the page, but
+        // has size on printspace tag just inside the page element
+        var printspace = page.find('PrintSpace');
+        page_height = printspace.attr('HEIGHT');
+        page_width = printspace.attr('WIDTH');
+    }
     var blocks = page.find('[HEIGHT]');
     console.log('found ' + blocks.length + ' blocks with height attribute');
      $.each(blocks, function(i, el) {
