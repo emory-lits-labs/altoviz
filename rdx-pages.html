@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+<p>This bookmarklet is provided to make it easy to inspect Readux pages.
+Drag the link into your browser bookmarks, and then you can run it
+when you are viewing an individual Readux page which uses METS/ALTO
+for OCR.</p>
+
+<a class="btn btn-primary" href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='{{ site.bookmarklet_url }}{{ site.baseurl }}/js/rdx-bkmarklet.js';})();">RDX ALTO✓</a>
+
+<hr/>
+
+<p class="text-muted small">Due to cross-origin restrictions, this bookmarklet will
+currently only work on publicly accessible content.</p>
+</div>
