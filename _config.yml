@@ -21,3 +21,5 @@ bookmarklet_url: "//emory-lits-labs.github.io"
 
 # Build settings
 markdown: kramdown
+
+permalink: pretty
