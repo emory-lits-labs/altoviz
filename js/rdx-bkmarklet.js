@@ -1,3 +1,5 @@
+---
+---
 // bookmarklet code adapted from
 // https://www.smashingmagazine.com/2010/05/make-your-own-bookmarklets-with-jquery/
 
@@ -48,7 +50,7 @@
             if (! img_url.startsWith('http')) {
                 img_url = window.location.protocol + '//' + window.location.host + img_url;
             }
-            window.location.href = 'http://localhost:4000/altoviz/?img=' + img_url + '&alto=' + alto;
+            window.location.href = '{{ site.bookmarklet_url }}{{ site.baseurl }}/?img=' + img_url + '&alto=' + alto;
         })();
     }
 
